@@ -1,0 +1,58 @@
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #110140;
+    position: relative;
+    height: 400px;
+    width: 360px;
+    margin: auto;
+    color: white;
+}
+
+#content {
+    height: 2rem;
+    width: 50vw;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+}
+
+div img {
+    height: 2rem;
+    width: 50vw;
+}
+
+#content>div:first-of-type {
+    border: 2px solid white;
+    background-color: grey;
+    padding: 0.5rem 2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(253, 253, 255);
+}
+
+#number {
+    margin-bottom: 1rem;
+    width: 97%;
+}
+
+#convert-btn {
+    display: block;
+    margin: auto;
+    padding: 0.2rem;
+    background-color: yellow;
+    width: 100%;
+    box-shadow: 0 0 10px rgb(254, 244, 43, 0.5);
+}
+
+#output-div {
+    border: 2px solid white;
+    background-color: grey;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+#error-div {
+    border: 2px solid red;
+    background-color: #5c0801;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
