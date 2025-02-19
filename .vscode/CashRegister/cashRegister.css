@@ -1,0 +1,146 @@
+body {
+    font-family: Times, sans-serif;
+    height: 360px;
+    width: 300px;
+    background-color: #0a0a23;
+    margin: auto;
+}
+
+header>img {
+    height: 2rem;
+    width: 20rem;
+    position: relative;
+    text-align: center;
+    top: 2rem;
+}
+
+#title {
+    font-size: 1.1rem;
+    width: 20rem;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+#change-due {
+    list-style: none;
+    display: block
+}
+
+#cash {
+    margin-top: 10px;
+}
+
+#cash-register {
+    position: absolute;
+    text-align: center;
+    color: white;
+}
+
+#purchase-btn {
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    height: 1.7rem;
+    width: 35%;
+    position: relative;
+    left: 33%;
+    justify-items: center;
+    background-color: goldenrod;
+    font-size: large;
+    font-weight: bold;
+    border-width: 3px;
+    border-color: goldenrod;
+}
+
+#div-outside-total {
+    top: 1.5em;
+    left: 3.5rem;
+    background-color: #99c9ff;
+    height: 3.5rem;
+    width: 13rem;
+    position: absolute;
+    line-height: 2.5rem;
+}
+
+#div-total-join-with-register {
+    top: 4.5em;
+    left: 5rem;
+    background-color: #99c9ff;
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+}
+
+#div-total {
+    top: 1.8em;
+    left: 4rem;
+    background-color: #0a0a23;
+    height: 2.5rem;
+    width: 12rem;
+    position: absolute;
+    line-height: 2.5rem;
+    font-size: 1.1em;
+}
+
+#div-cash-register {
+    background-color: #99c9ff;
+    position: absolute;
+    height: 15rem;
+    width: 19rem;
+    top: 7rem;
+    left: 2rem;
+    border-radius: 20px 20px 0 0;
+}
+
+#change-drawer {
+    top: 1rem;
+    left: 6rem;
+    background-color: white;
+    color: black;
+    height: 12.8rem;
+    width: 11.5rem;
+    position: absolute;
+    padding-top: 10px;
+    text-align: start;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    list-style: none;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 5rem;
+    margin-top: 10px;
+    top: 0.5rem;
+    left: 0.7rem;
+    position: absolute;
+}
+
+.box>* {
+    background-color: #0a0a23;
+    margin: 2px;
+    border-radius: 3px;
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+#div-footer-cash-register {
+    background-color: #99c9ff;
+    position: absolute;
+    height: 3rem;
+    width: 19rem;
+    top: 22.7rem;
+    left: 2rem;
+}
+
+#circle {
+    background-color: #0a0a23;
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    top: 23.4rem;
+    left: 10.5rem;
+    border-radius: 50%;
+}
