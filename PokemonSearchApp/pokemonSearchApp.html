@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a Pokemon Search App</title>
+    <link rel="stylesheet" href="./pokemonSearchApp.css" />
+</head>
+
+<body>
+    <header>
+        <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="code-camp-img"></img>
+    </header>
+    <div id="content-div">
+        <div id="search-div">
+            <h1 id="title">Pokemon Search App</h1>
+            <p>Search for Pokemon Name or ID: </p>
+            <input id="search-input" required />
+            <button id="search-button">Search</button>
+        </div>
+        <div id="pokemon-info">
+            <div style="display: block">
+                <span id="pokemon-name"></span>
+                <span id="pokemon-id"></span>
+            </div>
+            <div id="weight-height-div">
+                <span id="weight"></span>
+                <span id="height"></span>
+            </div>
+            <div id="pokemon-sprite"></div>
+            <span id="types">
+            </span>
+        </div>
+        <div id="pokemon-stats">
+            <div class="box"><b>Base</b></div>
+            <div class="box"><b>Stats</b></div>
+
+            <div class="box">HP</div>
+            <div class="box" id="hp">.</div>
+
+            <div class="box">Attack</div>
+            <div class="box" id="attack">.</div>
+
+            <div class="box">Defense</div>
+            <div class="box" id="defense">.</div>
+
+            <div class="box">Sp. Attack</div>
+            <div class="box" id="special-attack">.</div>
+
+            <div class="box">Sp. Defense</div>
+            <div class="box" id="special-defense">.</div>
+
+            <div class="box">Speed</div>
+            <div class="box" id="speed">.</div>
+
+
+        </div>
+    </div>
+    <script src="./pokemonSearchApp.js"></script>
+</body>
+
+</html>
