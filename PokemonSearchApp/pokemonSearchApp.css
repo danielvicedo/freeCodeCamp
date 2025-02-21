@@ -61,30 +61,45 @@ header>img {
     background-color: rgb(154, 84, 220);
 }
 
+#pokemon-info {
+    margin: 20px;
+    margin-bottom: 0;
+    height: 15rem;
+
+}
+
+#name-id-div {
+    text-align: start;
+    margin-top: 5px;
+}
+
+#weight-height-div {
+    text-align: start;
+    font-size: small;
+    margin-top: 5px;
+
+}
+
 #sprite {
-    margin: 10px 20%;
+    margin: 10px;
     height: 10rem;
     width: 10rem;
+}
+
+#types {
+    width: 30px;
+    height: 200px;
+
 }
 
 #types>* {
     width: 100px;
     color: white;
     padding: 4px;
-    margin: 3px;
-    border-radius: 10px
-}
-
-#pokemon-info {
-    margin: 20px;
-    margin-bottom: 0;
-    text-align: start;
-    height: 15rem;
-}
-
-#weight-height-div {
-    font-size: small;
-    margin-top: 5px;
+    margin: 2px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 10px grey;
 }
 
 #pokemon-stats {

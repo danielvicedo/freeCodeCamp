@@ -8,8 +8,6 @@ const pokemonId = document.getElementById("pokemon-id")
 const pokemonWeight = document.getElementById("weight")
 const pokemonHeight = document.getElementById("height")
 const pokemonTypes = document.getElementById("types")
-const pokemonType1 = document.getElementById("typing-1")
-const pokemonType2 = document.getElementById("typing-2")
 const pokemonHp = document.getElementById("hp")
 const pokemonAttack = document.getElementById("attack")
 const pokemonDefense = document.getElementById("defense")
@@ -39,10 +37,11 @@ const typeColors = {
 };
 
 async function fetchData() {
+
     try {
         const response = await fetch(`${pokemonList}/${searchInput.value.toLowerCase()}`);
         const json = await response.json();
-        const { name, id, weight, height, sprites, stats } = json
+        const { name, id, weight, height, sprites, stats, types } = json
         pokemonName.textContent = name.toUpperCase();
         pokemonId.textContent = `#${id}`
         pokemonWeight.textContent = `Weight: ${weight}`
@@ -50,13 +49,9 @@ async function fetchData() {
         pokemonSprite.innerHTML = `<img id="sprite" src="${sprites.front_default}"></img>`
 
         pokemonSprite.innerHTML = '';
-        const pokemonImage = document.createElement('img');
-        pokemonImage.src = sprites.front_default;
-        pokemonImage.alt = name;
-        pokemonImage.id = 'sprite';
-        pokemonSprite.appendChild(pokemonImage);
-        pokemonSprite.style.display = "block"
+        pokemonSprite.innerHTML = `<img id="sprite" src="${sprites.front_default}">`
 
+        pokemonSprite.style.display = "block"
         pokemonHp.textContent = stats[0].base_stat;
         pokemonAttack.textContent = stats[1].base_stat;
         pokemonDefense.textContent = stats[2].base_stat;
@@ -64,12 +59,9 @@ async function fetchData() {
         pokemonSpDefense.textContent = stats[4].base_stat;
         pokemonSpeed.textContent = stats[5].base_stat;
 
-        pokemonTypes.innerHTML = '';
-        json.types.forEach(type => {
-            const typeElement = document.createElement('span');
-            typeElement.textContent = type.type.name;
-            typeElement.style.backgroundColor = typeColors[type.type.name];
-            pokemonTypes.appendChild(typeElement);
+        types.forEach(type => {
+            pokemonTypes.innerHTML += `<span style="background-color:${typeColors[type.type.name]};">${type.type.name}</span>`
+
         })
     } catch {
         alert("Pokemon not found")
@@ -82,8 +74,8 @@ const clearInfo = () => {
     pokemonWeight.textContent = ""
     pokemonHeight.textContent = ""
     pokemonSprite.innerHTML = ""
-    pokemonHp.textContent = ""
     pokemonTypes.innerHTML = ""
+    pokemonHp.textContent = ""
     pokemonAttack.textContent = ""
     pokemonDefense.textContent = ""
     pokemonSpAttack.textContent = ""
